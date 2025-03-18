@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/transferencias")
-@CrossOrigin(origins = "http://localhost:8081") // Permite requisições do frontend (Vue.js)
+@CrossOrigin(origins = "http://localhost:8081")
 public class TransferenciaController {
 
     private final TransferenciaService transferenciaService;

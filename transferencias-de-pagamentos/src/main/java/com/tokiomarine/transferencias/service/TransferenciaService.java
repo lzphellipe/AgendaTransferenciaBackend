@@ -19,14 +19,14 @@ public class TransferenciaService {
     }
 
     public Transferencia agendarTransferencia(Transferencia transferencia) {
-        // Calcula a taxa com base na data de transferência
+
         BigDecimal taxa = calcularTaxa(transferencia.getDataTransferencia(), transferencia.getValorTransferencia());
         transferencia.setTaxa(taxa);
 
-        // Define a data de agendamento como hoje
+
         transferencia.setDataAgendamento(LocalDate.now());
 
-        // Salva a transferência no banco de dados
+
         return transferenciaRepository.save(transferencia);
     }
 
